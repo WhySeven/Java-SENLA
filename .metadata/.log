@@ -243,3 +243,13 @@ org.eclipse.core.runtime.CoreException: The Class File Viewer cannot handle the 
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 !SUBENTRY 2 org.eclipse.jdt.ui 4 996 2020-12-29 13:44:14.915
 !MESSAGE The Class File Viewer cannot handle the given input ('org.eclipse.ui.ide.FileStoreEditorInput').
+
+!ENTRY org.eclipse.core.resources 2 2 2020-12-29 13:54:45.700
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2020-12-29 13:54:45.700
+!MESSAGE The project description file (.project) for 'Java-SENLA' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 2 2 2020-12-29 13:55:10.167
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2020-12-29 13:55:10.167
+!MESSAGE The project description file (.project) for 'Java-SENLA' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
