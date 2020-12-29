@@ -1,0 +1,48 @@
+package java_2;
+
+import java.util.Scanner;
+
+public class Test_2 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+        System.out.print("Input a number: ");
+        double check_1 = in.nextDouble();
+        System.out.print("Input a number: ");
+        double check_2 = in.nextDouble();
+        in.close();
+        if(Math.floor(check_1) != check_1||Math.floor(check_2) != check_2) 
+        {System.out.print("You entered not an integer");}
+        else if (0 >= check_1|| 0 >= check_2)
+        {System.out.print("Entered numbers must be greater than zero");}
+        else 
+        {	
+        	int a,b;
+        	if(check_1>=check_2)
+        	{
+        		a = (int)check_1;
+        		b = (int)check_2;
+        	}else
+        	{
+        		a = (int)check_2;
+        		b = (int)check_1;
+        	}
+        	
+        	int gcd = GreatestCommonDivisor(a, b);
+        	System.out.println("gcd = " + gcd);
+        	System.out.println("lcm = " + LeastCommonMultiple(a,b,gcd));
+        }
+	}
+	static int GreatestCommonDivisor (int a, int b)
+	{
+		if (b == 0) {
+	        return a;
+	    }
+	    return GreatestCommonDivisor (b, a % b);
+	}
+	static int LeastCommonMultiple (int a, int b, int gcd)
+	{
+		return Math.abs(a*b)/gcd;
+	}	
+}
+
