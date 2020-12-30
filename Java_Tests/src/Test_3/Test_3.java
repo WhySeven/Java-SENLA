@@ -5,18 +5,21 @@ import java.util.Scanner;
 public class Test_3 {
 
 	public static void main(String[] args) {
-		/*Scanner in = new Scanner(System.in);
+		
+		Scanner in = new Scanner(System.in);
         System.out.print("Input a string: ");
         String s = in.nextLine();
-        in.close();*/
-		String s = "va av 1 vb";
+        in.close();
+        
         String [] split = s.split(" ");
+        
         System.out.println("Number of words = " + split.length);
         String [] out = UppercaseFirstSymbol(split);
         out = Sort(out);
-        for(int i = 0; i < split.length;i++)
+        
+        for(String item : out) 
         {
-        	System.out.println(out[i]);
+        	System.out.println(item);
         }
 	}
 	static String[] UppercaseFirstSymbol(String[] strArr)
@@ -39,7 +42,7 @@ public class Test_3 {
 					strArr = SwapWords(i,j,strArr); 
 				}
 			}  
-		}  
+		}
 		return strArr;
 	}
 	static String[] SwapWords (int a, int b, String[] strArr)
