@@ -1,0 +1,42 @@
+package Test_6;
+
+public class Test_6 {
+
+	public static void main(String[] args) {
+		Backpack backpack = new Backpack(100);
+		ItemsSet items = new ItemsSet();
+		items.ExampleOfItems();
+		items.Out();
+	}
+	static void BestSet(Backpack backpack, ItemsSet items)
+	{
+		if(items.NumberOfItems()!=0)
+		{
+			ItemsSet bestSet = items;
+			int maxWeight = backpack.capacity;
+			for(int i = 0; i < items.NumberOfItems();i++)
+			{
+				if(items.<=maxWeight)
+				{
+					bestSet.AddItem(items.get(i).weight, items.get(i).cost);
+				}
+			}
+			int numberOfItems =;
+			int maxCoast = 0;
+			bestSet.Out();
+			for(int i = 1; i <= maxWeight; i++)
+			{
+				for(int j = 0; j < numberOfItems;j++)
+				{
+					
+				}
+			}
+		}
+		else
+		{
+			System.out.println("Empty");
+		}
+		
+		
+	}
+}

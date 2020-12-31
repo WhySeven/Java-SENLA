@@ -1,0 +1,31 @@
+package Test_3;
+
+import java.util.Scanner;
+
+public class Test_3 {
+
+	public static void main(String[] args) {
+		/*Scanner in = new Scanner(System.in);
+        System.out.print("Input a string: ");
+        String s = in.nextLine();
+        in.close();*/
+		String s = "va av 1";
+        String [] split = s.split(" ");
+        System.out.println("Number of words = " + split.length);
+        String [] out = UppercaseFirstSymbol(split);
+        for(int i = 0; i < split.length;i++)
+        {
+        	System.out.println(out[i]);
+        }
+	}
+	static String[] UppercaseFirstSymbol(String[] split)
+	{
+		String [] temp = split;
+		for(String item : temp)
+		{
+			item = item.substring(0, 1).toUpperCase() + item.substring(1);
+			System.out.println(item);
+		}
+		return temp;
+	}
+}

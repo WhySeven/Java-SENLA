@@ -1,0 +1,13 @@
+package Test_6;
+import java.util.ArrayList;
+public class Test_6 {
+
+	public static void main(String[] args) {
+		Backpack backpack = new Backpack(100);
+		ItemsSet items = new ItemsSet();
+		items.ExampleOfItems();
+		//items.UnitSort();
+		items.Out();
+		
+	}
+}

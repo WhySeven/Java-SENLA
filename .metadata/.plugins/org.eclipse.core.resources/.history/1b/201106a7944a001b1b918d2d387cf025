@@ -1,0 +1,45 @@
+package Test_6;
+import java.util.ArrayList;
+public class Test_6 {
+
+	public static void main(String[] args) {
+		Backpack backpack = new Backpack(100);
+		ArrayList<Item> items = new ArrayList<Item>();
+		items.add(new Item(11,1));
+		items.add(new Item(17,1));
+		items.add(new Item(24,1));
+		items.add(new Item(46,1));
+		items.add(new Item(31,1));
+		items.add(new Item(7,1));
+		items.add(new Item(53,1));
+		items.add(new Item(25,1));
+		items.add(new Item(23,1));
+		items.add(new Item(13,1));
+		System.out.println(CalcWeight(items));
+		System.out.println(CalcCost(items));
+		System.out.println(MaxCoast(0,backpack.capacity,items));
+	}
+	static int MaxCoast(int coast,int capacity,ArrayList<Item> items)
+	{
+		return 0;
+	}
+	static int CalcWeight(ArrayList<Item> items)
+	{
+		int weight = 0;
+		for(Item item : items)
+		{
+			weight+=item.weight;
+		}
+		return weight;
+	}
+	static int CalcCost(ArrayList<Item> items)
+	{
+		int cost = 0;
+		for(Item item : items)
+		{
+			cost+=item.cost;
+		}
+		return cost;
+	}
+
+}

@@ -1,0 +1,80 @@
+package Test_6;
+import java.util.ArrayList;
+public class ItemsSet {
+	
+	ArrayList<Item> items;
+	ItemsSet()
+	{
+		items = new ArrayList<Item>();
+	}
+	ItemsSet(ArrayList<Item> items)
+	{
+		this.items = items;
+	}
+	void ExampleOfItems()
+	{
+		items.add(new Item(11,1));
+		items.add(new Item(17,1));
+		items.add(new Item(24,1));
+		items.add(new Item(46,1));
+		items.add(new Item(31,1));
+		items.add(new Item(7,1));
+		items.add(new Item(53,1));
+		items.add(new Item(25,1));
+		items.add(new Item(23,1));
+		items.add(new Item(101,1));
+		items.add(new Item(102,1));
+		items.add(new Item(103,1));
+		items.add(new Item(104,1));
+		items.add(new Item(105,1));
+		items.add(new Item(106,1));
+	}
+	void AddItem(int weight, int cost)
+	{
+		items.add(new Item(weight,cost));
+	}
+	void Out()
+	{
+		if(!items.isEmpty())
+		{
+			int place = 1;
+			for(Item item : items)
+			{
+				System.out.printf("%d: Weight = %d; Cost = %d;\n",place,item.weight,item.cost);
+				place++;
+			}
+		}
+		else
+		{
+			System.out.println("Empty");
+		}
+	}
+	void BestSet(Backpack backpack)
+	{
+		if(!items.isEmpty())
+		{
+			ArrayList<Item> bestSet = new ArrayList<Item>();
+			int maxWeight = backpack.capacity;
+			for(int i = 0; i < items.size();i++)
+			{
+				if(items.get(i).weight<=maxWeight)
+				{
+					bestSet.add(items.get(i));
+				}
+			}
+			int numberOfItems = bestSet.items.size();
+			bestSet.Out();
+			for(int i = 1; i <= maxWeight; i++)
+			{
+				for(int j = 0; j < numberOfItems;j++)
+				{
+					
+				}
+			}
+		}
+		else
+		{
+			System.out.println("Empty");
+		}
+	}
+}

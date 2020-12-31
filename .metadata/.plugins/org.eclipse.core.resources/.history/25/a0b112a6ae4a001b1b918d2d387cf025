@@ -1,0 +1,16 @@
+package Test_6;
+
+public class Test_6 {
+
+	public static void main(String[] args) {
+		Backpack backpack = new Backpack(100);
+		ItemsSet items = new ItemsSet();
+		items.ExampleOfItems();
+		BestSet(backpack,items);
+	}
+	static void BestSet(Backpack backpack, ItemsSet items)
+	{
+		System.out.println(items.NumberOfItems());
+		
+	}
+}

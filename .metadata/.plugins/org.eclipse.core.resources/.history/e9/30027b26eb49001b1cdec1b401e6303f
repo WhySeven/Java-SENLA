@@ -1,0 +1,28 @@
+package Test_4;
+
+public class Test_4 {
+
+	public static void main(String[] args) {
+		String text = "ава, ава ава";
+		String word = "ава";
+		System.out.println(SearchWord(text,word));
+
+
+	}
+	static int SearchWord (String text, String word)
+	{
+		int res = 0;
+		text.toLowerCase();
+		word.toLowerCase();
+		String[] split = text.split("/w");
+		for(int i = 0; i < split.length; i++)
+		{
+			if(split[i].contentEquals(word))
+			{
+				res++;
+			}
+		}
+		return res;
+	}
+
+}
