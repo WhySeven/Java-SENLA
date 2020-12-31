@@ -87,7 +87,7 @@ public class ItemsSet {
 					}
 				}
 			}
-			System.out.printf("Answer: %d",table[numberOfItems-1][maxWeight]);
+			System.out.printf("Max cost: %d",table[numberOfItems-1][maxWeight]);
 		}
 		else
 		{
