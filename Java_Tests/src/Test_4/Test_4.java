@@ -18,14 +18,10 @@ public class Test_4 {
 		int count = 0;
 		text.toLowerCase();
 		word.toLowerCase();
-		String[] split = text.split("[\\s,.?!:;+-=*/@#%^&(){}'']+");
+		String[] split = text.split("[\\s,.?!:;+-=*/%^&()]+");
 		for(int i = 0; i < split.length; i++)
-		{
 			if(split[i].contentEquals(word))
-			{
 				count++;
-			}
-		}
 		return count;
 	}
 }

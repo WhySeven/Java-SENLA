@@ -1,5 +1,7 @@
 package Test_5;
+
 import java.util.Scanner;
+
 public class Test_5 {
 
 	public static void main(String[] args) {
@@ -8,9 +10,7 @@ public class Test_5 {
         int N = in.nextInt();
         in.close();
         if (N >= 0 && N <= 100) 
-        {
         	PrintAllPalindromes(N);
-        }
         else
         	System.out.println("The number is incorrect, it must not be more than 100 and less than 0");
 	}
@@ -26,7 +26,5 @@ public class Test_5 {
         	if (i==11)
         		temp = 11;
         }
-        
     }
-
 }

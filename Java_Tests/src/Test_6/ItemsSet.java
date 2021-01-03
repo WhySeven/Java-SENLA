@@ -40,6 +40,7 @@ public class ItemsSet {
 	{
 		if(!items.isEmpty())
 		{
+			System.out.println("List of all items:");
 			int place = 1;
 			for(Item item : items)
 			{
@@ -48,9 +49,7 @@ public class ItemsSet {
 			}
 		}
 		else
-		{
 			System.out.println("Empty");
-		}
 	}
 	void MaxCoast (Backpack backpack)
 	{
@@ -62,7 +61,6 @@ public class ItemsSet {
 			int a;
 			int b;
 			for(int i = 0; i < numberOfItems; i++)
-			{
 				for(int j = 1; j <= maxWeight;j++)
 				{
 					if(i==0) 
@@ -74,24 +72,16 @@ public class ItemsSet {
 					}
 					else
 					{	if(j-items.get(i).weight<1)
-						{
 							table[i][j] = table[i-1][j-1];
-						}
 						else
 						{
 							a = table[i-1][j-items.get(i).weight]+items.get(i).cost;
 							b = table[i-1][j-1];
 							table[i][j] = Math.max(a, b);
 						}
-						
 					}
 				}
-			}
 			System.out.printf("Max cost: %d",table[numberOfItems-1][maxWeight]);
-		}
-		else
-		{
-			System.out.println("Empty");
 		}
 	}
 }

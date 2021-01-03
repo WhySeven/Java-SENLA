@@ -18,33 +18,26 @@ public class Test_3 {
         out = Sort(out);
         
         for(String item : out) 
-        {
         	System.out.println(item);
-        }
 	}
+	
 	static String[] UppercaseFirstSymbol(String[] strArr)
 	{
 		for(int i = 0; i< strArr.length;i++)
-		{
 			strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1);
-		}
 		return strArr;
 	}
+	
 	static String [] Sort (String[] strArr)
 	{
 		int size = strArr.length;  
 		for(int i = 0; i<size-1; i++)   
-		{  
 			for (int j = i+1; j<strArr.length; j++)   
-			{  
 				if(strArr[i].compareTo(strArr[j])>0)   
-				{
 					strArr = SwapWords(i,j,strArr); 
-				}
-			}  
-		}
 		return strArr;
 	}
+	
 	static String[] SwapWords (int a, int b, String[] strArr)
 	{
 		String temp = strArr[a];
